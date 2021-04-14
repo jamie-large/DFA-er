@@ -25,11 +25,8 @@ def main():
 	# Get the code, either as input from the user until they send EOF or from the specified file
 	if (len(sys.argv) == 1):
 		str_buf = []
-		while True:
-			buf = sys.stdin.readline()
-			if not buf:
-				break
-			str_buf.append(buf)
+		for line in sys.stdin:
+			str_buf.append(line)
 		code = ''.join(str_buf)
 	else:
 		try:
@@ -173,17 +170,18 @@ def run_DFA(code):
 		elif (code[c] == '-'):
 			c += 1
 			str_buf = []
-			while True:
-				buf = sys.stdin.readline()
-				if not buf:
-					break
-				str_buf.append(buf)
-			code = ''.join(str_buf) + code[c:]
+			for line in sys.stdin:
+				str_buf.append(line)
+			ch_buf = []
+			for ch in ''.join(str_buf):
+				ch_buf.append(str(bin(ord(ch))))
+			additional_code = '.' + '..'.join(ch_buf) + '.' if len(ch_buf) > 0 else ''
+			code = additional_code + code[c:]
 			c = 0
 			continue
 
 	if (current_state.accepting):
-		print ''.join(output_string)
+		print(''.join(output_string))
 
 	
 
