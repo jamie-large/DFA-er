@@ -6,6 +6,7 @@ import sys
 
 DFA = dict()
 starting_state = None
+debug = False
 
 # A state in the DFA with:
 # name - some nonnegative integer
@@ -41,6 +42,8 @@ def main():
 		parts.append('')
 
 	make_DFA(parts[0])
+	if debug:
+		print_DFA()
 	run_DFA(parts[1])
 
 
@@ -175,6 +178,8 @@ def run_DFA(code):
 			ch_buf = []
 			for ch in ''.join(str_buf):
 				ch_buf.append(str(bin(ord(ch))))
+			if debug:
+				print(ch_buf)
 			additional_code = '.' + '..'.join(ch_buf) + '.' if len(ch_buf) > 0 else ''
 			code = additional_code + code[c:]
 			c = 0
