@@ -1,20 +1,20 @@
-### Create a starting, rejecting state ‘H’ that moves to state ‘e’ when it receives 0
+### Create a starting, rejecting state 'H' that moves to state 'e' when it receives 0
 .1001000.--1100101-
-### Create a rejecting state ‘e’ that moves to state ‘l’ when it receives 0
+### Create a rejecting state 'e' that moves to state 'l' when it receives 0
 .1100101.--1101100-
-### Create a rejecting state ‘l’ that moves to state ‘l’ when it receives 0, state ‘o’ when it receives 1, and state ‘d’ when it receives 2
+### Create a rejecting state 'l' that moves to state 'l' when it receives 0, state 'o' when it receives 1, and state 'd' when it receives 2
 .1101100.--1101100--1-1101111--10-1100100-
-### Create a rejecting state ‘o’ that moves to state ‘,’ when it receives 0 and state ‘r’ when it receives 1
+### Create a rejecting state 'o' that moves to state ',' when it receives 0 and state 'r' when it receives 1
 .1101111.--101100--1-1110010-
-### Create a rejecting state ‘,’ that moves to state ‘ ’ when it receives 0
+### Create a rejecting state ',' that moves to state ' ' when it receives 0
 .101100.--100000-
-### Create a rejecting state ‘ ’ that moves to state ‘w’ when it receives 0
+### Create a rejecting state ' ' that moves to state 'w' when it receives 0
 .100000.--1110111-
-### Create a rejecting state ‘w’ that moves to state ‘o’ when it receives 0
+### Create a rejecting state 'w' that moves to state 'o' when it receives 0
 .1110111.--1101111-
-### Create a rejecting state ‘r’ that moves to state ‘l’ when it receives 0
+### Create a rejecting state 'r' that moves to state 'l' when it receives 0
 .1110010.--1101100-
-### Create a rejecting state ‘d’ that moves to state 33  when it receives 0
+### Create a rejecting state 'd' that moves to state 33  when it receives 0
 .1100100.--100001-
 ### Create an accepting state 33
 ..100001.
