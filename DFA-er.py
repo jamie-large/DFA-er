@@ -212,13 +212,13 @@ def read_binary(code, stop_char):
 def print_DFA():
 	for state in DFA:
 		if (DFA[state] == starting_state):
-			print "STARTING STATE"
-		print "state name: " + str(DFA[state].name)
-		print "accepting: " + str(DFA[state].accepting)
-		print "state paths: " 
+			print("STARTING STATE")
+		print("state name: " + str(DFA[state].name))
+		print("accepting: " + str(DFA[state].accepting))
+		print("state paths: ")
 		for path in DFA[state].paths:
-			print "\t" + str(path) + ": " + str(DFA[state].paths[path].name)
-		print
+			print("\t" + str(path) + ": " + str(DFA[state].paths[path].name))
+		print()
 
 
 
