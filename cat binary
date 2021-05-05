@@ -1,12 +1,9 @@
 ### Given a binary number as input from the user, prints out the number they wrote
-.0.
--110000-110000-
--110001-110001-
-..110000.
--110000-110000-
--110001-110001-
-..110001.
--110000-110000-
--110001-110001-
-!
--
+### Create a starting state '' that moves to state '0' when it receives '0' and '1' when it receives '1'
+.0.-110000-110000--110001-110001-
+### Create an accepting state '0' that moves to state '0' when it receives '0' and state '1' when it receives '1'
+..110000.-110000-110000--110001-110001-
+### Create an accepting state '1' that moves to state '0' when it receives '0' and state '1' when it receives '1'
+..110001.-110000-110000--110001-110001-
+### Create the DFA and take input from the user
+!-
